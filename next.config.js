@@ -10,7 +10,7 @@ const nextConfig = {
                     { key: "Access-Control-Allow-Credentials", value: "true" },
                     {
                         key: "Access-Control-Allow-Origin",
-                        value: "https://portfolio-react-next-dldvk9999.vercel.app,http://localhost:3000/",
+                        value: "https://portfolio-react-next-dldvk9999.vercel.app",
                     },
                     {
                         key: "Access-Control-Allow-Methods",
