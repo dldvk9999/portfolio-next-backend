@@ -29,3 +29,15 @@ export default async function POST(request: NextRequest) {
         return NextResponse.json({ message: "key must be string" }, { status: 500 });
     }
 }
+
+export async function OPTIONS(request: NextRequest) {
+    const result = NextResponse.json({ message: "OPTIONS Method test!!!" }, { status: 200 });
+    result.headers.set("Access-Control-Allow-Origin", "https://portfolio-react-next-dldvk9999.vercel.app");
+    result.headers.set("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");
+    result.headers.set(
+        "Access-Control-Allow-Headers",
+        "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+    );
+
+    return result;
+}
