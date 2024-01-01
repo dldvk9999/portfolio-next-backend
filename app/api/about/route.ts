@@ -32,7 +32,6 @@ export async function POST(request: NextRequest) {
 
 export async function OPTIONS(request: NextRequest) {
     const result = NextResponse.json({ message: "OPTIONS Method test!!!" }, { status: 200 });
-    result.headers.set("Access-Control-Allow-Origin", "*");
     result.headers.set("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");
     result.headers.set(
         "Access-Control-Allow-Headers",
