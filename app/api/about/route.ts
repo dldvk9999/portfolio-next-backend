@@ -29,3 +29,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ message: "key must be string" }, { status: 500 });
     }
 }
+
+export async function OPTIONS(request: NextRequest) {
+    return NextResponse.json({ message: "Method Not Allowed test!!!" }, { status: 405 });
+}
