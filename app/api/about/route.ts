@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import connection from "@/app/config";
 import { keyCheck } from "@/app/common";
 
-export async function POST(request: NextRequest) {
+export default async function POST(request: NextRequest) {
     const req = await request.json();
     const key = req.key;
 
@@ -28,8 +28,4 @@ export async function POST(request: NextRequest) {
     } else {
         return NextResponse.json({ message: "key must be string" }, { status: 500 });
     }
-}
-
-export async function OPTIONS(request: NextRequest) {
-    return NextResponse.json({ message: "Method Not Allowed test!!!" }, { status: 405 });
 }
