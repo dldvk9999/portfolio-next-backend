@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import connection from "@/app/config";
 import { keyCheck } from "@/app/common";
 
-export default async function POST(request: NextRequest) {
+export async function POST(request: NextRequest) {
     const req = await request.json();
     const key = req.key;
 
